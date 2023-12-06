@@ -2,18 +2,8 @@
 word = "Архангельск"
 
 
-def last_letter(word):
-    list_of_words = word.split()
-    return list_of_words[0][-1]
-
-
-print(last_letter(word))
-
-
 def last_letter_another(word):
-    char_list = list(word)
-
-    return char_list[-1]
+    return word[-1]
 
 
 print(last_letter_another(word))
@@ -78,14 +68,11 @@ sentence = "Мы приехали в гости"
 def sentence_avg(sentence):
     list_of_words = sentence.split()
     list_of_length = []
-    sum_of_numbers = 0
     for word in list_of_words:
         word_length = len(word)
         list_of_length.append(word_length)
 
-    for number in list_of_length:
-        sum_of_numbers += number
-    return sum_of_numbers / len(list_of_length)
+    return sum(list_of_length) / len(list_of_length)
 
 
 print(sentence_avg(sentence))

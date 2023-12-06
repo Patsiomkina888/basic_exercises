@@ -72,10 +72,8 @@ groups = [
 def number_of_students(groups):
     number_of_groups = len(groups)
     print(f"Всего {number_of_groups} групп(a/ы)")
-    number = 1
-    for group in groups:
-        print(f"Группа {number}: {len(group)}")
-        number += 1
+    for number, group in enumerate(groups, start=1):
+        print(f"Группа {number}: {len(group)} ученика(-ов)")
     return "Конец списка"
 
 
